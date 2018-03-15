@@ -26,7 +26,7 @@ import java.util.List;
  */
 public interface Constants {
 
-    String TAG = "Kernel Adiutor";
+    String TAG = "TheRagingBeast Kernel Adiutor";
     String VERSION_NAME = BuildConfig.VERSION_NAME;
     int VERSION_CODE = BuildConfig.VERSION_CODE;
     String PREF_NAME = "prefs";
@@ -497,18 +497,18 @@ public interface Constants {
     String GPU_AVAILABLE_KGSL2D0_QCOM_FREQS = "/sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/gpu_available_frequencies";
     String GPU_SCALING_KGSL2D0_QCOM_GOVERNOR = "/sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/pwrscale/trustzone/governor";
 
-    String GPU_CUR_KGSL3D0_QCOM_FREQ = "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk";
-    String GPU_MAX_KGSL3D0_QCOM_FREQ = "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk";
-    String GPU_AVAILABLE_KGSL3D0_QCOM_FREQS = "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpu_available_frequencies";
-    String GPU_SCALING_KGSL3D0_QCOM_GOVERNOR = "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor";
+    String GPU_CUR_KGSL3D0_QCOM_FREQ = "/sys/class/kgsl/kgsl-3d0/gpuclk";
+    String GPU_MAX_KGSL3D0_QCOM_FREQ = "/sys/class/kgsl/kgsl-3d0/max_gpuclk";
+    String GPU_AVAILABLE_KGSL3D0_QCOM_FREQS = "/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies";
+	String GPU_SCALING_KGSL3D0_QCOM_GOVERNOR = "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor";
 
-    String GPU_CUR_FDB00000_QCOM_FREQ = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk";
-    String GPU_MAX_FDB00000_QCOM_FREQ = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk";
+    String GPU_CUR_FDB00000_QCOM_FREQ = "/sys/class/kgsl/kgsl-3d0/gpuclka";
+    String GPU_MAX_FDB00000_QCOM_FREQ = "/sys/class/kgsl/kgsl-3d0/max_gpuclka";
     String GPU_MIN_FDB00000_QCOM_FREQ = "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq";
-    String GPU_AVAILABLE_FDB00000_QCOM_FREQS = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_available_frequencies";
-    String GPU_SCALING_FDB00000_QCOM_GOVERNOR = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/governor";
-    String GPU_SCALING_PWRSCALE_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor";
-    String GPU_AVAILABLE_FDB00000_QCOM_GOVERNORS = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/available_governors";
+    String GPU_AVAILABLE_FDB00000_QCOM_FREQS = "/sys/class/kgsl/kgsl-3d0/gpu_available_frequenciesa";
+    String GPU_SCALING_FDB00000_QCOM_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/devfreq/governor";
+    String GPU_AVAILABLE_FDB00000_QCOM_GOVERNORS = "/sys/class/kgsl/kgsl-3d0/devfreq/available_governors";
+    String GPU_SCALING_PWRSCALE_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governora";
 
     String GPU_CUR_FDC00000_QCOM_FREQ = "/sys/devices/fdc00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk";
     String GPU_MAX_FDC00000_QCOM_FREQ = "/sys/devices/fdc00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk";
@@ -539,9 +539,9 @@ public interface Constants {
     String GPU_MIN_TEGRA_FREQ = "/sys/kernel/tegra_gpu/gpu_floor_rate";
     String GPU_AVAILABLE_TEGRA_FREQS = "/sys/kernel/tegra_gpu/gpu_available_rates";
 
-    String GPU_MIN_POWER_LEVEL = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/min_pwrlevel";
-    String GPU_MAX_POWER_LEVEL = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_pwrlevel";
-    String GPU_NUM_POWER_LEVELS = "/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/num_pwrlevels";
+    String GPU_MIN_POWER_LEVEL = "/sys/class/kgsl/kgsl-3d0/min_pwrlevel";
+    String GPU_MAX_POWER_LEVEL = "/sys/class/kgsl/kgsl-3d0/min_pwrlevel";
+    String GPU_NUM_POWER_LEVELS = "/sys/class/kgsl/kgsl-3d0/min_pwrlevels";
 
     String[] GPU_2D_CUR_FREQ_ARRAY = {
         GPU_CUR_KGSL2D0_QCOM_FREQ
@@ -955,9 +955,9 @@ public interface Constants {
     };
 
     // Sound
-    String SOUND_CONTROL_ENABLE = "/sys/module/snd_soc_wcd9320/parameters/enable_fs";
-    String WCD_HIGHPERF_MODE_ENABLE = "/sys/module/snd_soc_wcd9320/parameters/high_perf_mode";
-    String WCD_SPKR_DRV_WRND = "/sys/module/snd_soc_wcd9320/parameters/spkr_drv_wrnd";
+    String SOUND_CONTROL_ENABLE = "/sys/module/snd_soc_wcd9330/parameters/enable_fs";
+    String WCD_HIGHPERF_MODE_ENABLE = "/sys/module/snd_soc_wcd9330/parameters/high_perf_mode";
+    String WCD_SPKR_DRV_WRND = "/sys/module/snd_soc_wcd9330/parameters/spkr_drv_wrnd";
 
     String FAUX_SOUND = "/sys/kernel/sound_control";
     String HEADPHONE_GAIN = "/sys/kernel/sound_control/headphone_gain";
