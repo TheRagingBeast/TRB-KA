@@ -1,5 +1,7 @@
 # KernelAdiutor
 
+[![Build Status](https://travis-ci.org/TheRagingBeast/TRB-KA.svg?branch=master)](https://travis-ci.org/TheRagingBeast/TRB-KA)
+
 Mod version of original  [Grarak/KernelAdiutor](https://github.com/Grarak/KernelAdiutor)
 
 ![Screenshot](https://raw.githubusercontent.com/bhb27/KA27/master/screenshots/screenshot.png)
