@@ -467,7 +467,7 @@ public class CPU implements Constants {
         if (!isBigLITTLE())
             for (int i = 0; i < getCoreCount(); i++) list.add(i);
         else if (getLITTLEcore() == 0)
-            for (int i = 0; i < 4; i++) list.add(i);
+            for (int i = 0; i < getBigCore(); i++) list.add(i);
         else
             for (int i = getLITTLEcore(); i < getCoreCount(); i++) list.add(i);
         return list;
@@ -478,7 +478,7 @@ public class CPU implements Constants {
         if (!isBigLITTLE())
             for (int i = 0; i < getCoreCount(); i++) list.add(i);
         else if (getBigCore() == 0)
-            for (int i = 0; i < 4; i++) list.add(i);
+            for (int i = 0; i < getLITTLEcore(); i++) list.add(i);
         else
             for (int i = getBigCore(); i < getCoreCount(); i++) list.add(i);
         return list;
@@ -495,21 +495,14 @@ public class CPU implements Constants {
     }
 
     public static boolean isBigLITTLE() {
-        boolean bigLITTLE = getCoreCount() > 2;
+        boolean bigLITTLE = getCoreCount() <= 4;
         if (!bigLITTLE) return false;
 
         if (bigCore == -1 || LITTLEcore == -1) {
             List < Integer > cpu0Freqs = getFreqs(0);
             List < Integer > cpu2Freqs = getFreqs(2);
-            if (cpu0Freqs != null && cpu2Freqs != null) {
-                if (cpu0Freqs.size() > cpu2Freqs.size()) {
-                    bigCore = 0;
-                    LITTLEcore = 2;
-                } else {
                     bigCore = 2;
                     LITTLEcore = 0;
-                }
-            }
         }
 
         return bigCore != -1 && LITTLEcore != -1;
