@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <string name="app_name">BHB27 Kernel Adiutor</string>
+    <string name="app_name">TheRagingBeast Kernel Adiutor</string>
     <string name="root_waiting">Waiting for root access</string>
     <string name="no_root">No root available</string>
     <string name="no_busybox">No busybox available</string>
@@ -683,7 +683,7 @@
     <string name="hidden_app">Hidden Applications</string>
     <string name="content_providers">Content Providers</string>
     <string name="empty_app">Empty Applications</string>
-    <string name="bhb27_recommended">BHB27 Recommended</string>
+    <string name="bhb27_recommended">TheRagingBeast Recommended</string>
     <string name="moto_default">Moto Default</string>
     <string name="very_light">Very light</string>
     <string name="light">Light</string>
@@ -697,9 +697,9 @@
     <string name="lmk_count">LMK Kill Count</string>
     <string name="lmk_count_summary">Tasked Killed</string>
     <string name="lmk_profiles_original">Profiles (General use)</string>
-    <string name="lmk_bhb_profiles">BHB27 Profiles</string>
+    <string name="lmk_bhb_profiles">TheRagingBeast Profiles</string>
     <string name="lmk_profiles">LMK Profiles</string>
-    <string name="lmk_profiles_summary">Click on one of the Profile below to set its values to LMK Min Free parameters.\n\nValues will be set according this order:\nA,B,C,D,E,F,G\nWere:\nA = Foreground Applications\nB = Visible Applications\nC = Secondary Server\nD = Hidden Applications\nE = Content Provider\nF = Empty Applications\nG = VM Pressure Min\n\n*G VM Pressure Min, only available in BHB27 Kernel</string>
+    <string name="lmk_profiles_summary">Click on one of the Profile below to set its values to LMK Min Free parameters.\n\nValues will be set according this order:\nA,B,C,D,E,F,G\nWere:\nA = Foreground Applications\nB = Visible Applications\nC = Secondary Server\nD = Hidden Applications\nE = Content Provider\nF = Empty Applications\nG = VM Pressure Min\n\n*G VM Pressure Min, only available in TheRagingBeast Kernel</string>
 
     <!-- Virtual Memory -->
     <string name="process_reclaim">Process Reclaim</string>
@@ -834,6 +834,8 @@
     <string name="timerfd_wakelock_summary">Allow TimerFd wakelock.\n Currently: %s</string>
     <string name="netlink_wakelock">NetLink Wakelock</string>
     <string name="netlink_wakelock_summary">Allow NetLink wakelock.\n Currently: %s</string>
+	<string name="qpnp_wakelock">FuelGauge Sanity Check Wakelock</string>
+    <string name="qpnp_wakelock_summary">Allow FuelGauge Sanity check wakelock.\n Currently: %s</string>
     <string name="msm_hsic_host_wakelock">msm_hsic_host Wakelock</string>
     <string name="msm_hsic_host_wakelock_summary">Allow msm_hsic_host wakelock.\n Currently: %s</string>
     <string name="wlan_rx_wakelock">wlan_rx Wakelock</string>
@@ -1037,12 +1039,12 @@
     <string name="feature_requestb_summary">Do you want more features? or found a bug?\nClick here and mention @baybutcher27 with the request or bug on the XDA thread.</string>
     <string name="xda_summary">This app is supported via XDA thread check it here</string>
 
-    <string name="modification">Modified for BHB27-Kernel</string>
-    <string name="modification_summary">This application is being heavily modified for the kernel BHB27-Kernel for Quark Motorola (Moto Maxx, Turbo or Droid Turbo). Check it out in the downloads section!</string>
+    <string name="modification">Modified for TheRagingBeast-Kernel</string>
+    <string name="modification_summary">This application is being heavily modified for TheRagingBeast kernel available for various devices!</string>
 
-    <string name="modification_version">BHB27 Mod Version</string>
+    <string name="modification_version">TheRagingBeast Mod Version</string>
 
-    <string name="accessibility_service_label">BHB27-Kernel-Adiutor Per App Monitor</string>
+    <string name="accessibility_service_label">TheRagingBeast Per App Monitor</string>
     <string name="accessibility_service_desc">Service to monitor when foreground app changes for per-app profile loading</string>
 
 </resources>

@@ -243,6 +243,16 @@ public class WakeLock implements Constants {
     public static boolean hasNetlinkWakeLock() {
         return Utils.existFile(NETLINK_WAKELOCK);
     }
+	
+	public static void activateQpnpWakeLock(boolean active, Context context) {
+        Control.runCommand(active ? "Y" : "N", QPNP_WAKELOCK, Control.CommandType.GENERIC, context);
+    }
+     public static boolean isQpnpWakeLockActive() {
+        return Utils.readFile(QPNP_WAKELOCK).equals("Y");
+    }
+     public static boolean hasQpnpWakeLock() {
+        return Utils.existFile(QPNP_WAKELOCK);
+    }
 
     public static void setTestWakeLock(String value, Context context) {
         Control.runCommand(value, TEST_WAKELOCK, Control.CommandType.GENERIC, context);

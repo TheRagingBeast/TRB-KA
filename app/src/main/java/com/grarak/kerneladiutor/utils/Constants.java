@@ -1228,6 +1228,7 @@ public interface Constants {
     String MSM_HSIC_HOST_WAKELOCK = "/sys/module/wakeup/parameters/enable_msm_hsic_ws";
 
     String NETLINK_WAKELOCK = "/sys/module/wakeup/parameters/enable_netlink_ws";
+	String QPNP_WAKELOCK = "/sys/module/wakeup/parameters/enable_qpnp_fg_sanity_check_ws";
     String TIMERFD_WAKELOCK = "/sys/module/wakeup/parameters/enable_timerfd_ws";
 
     String TEST_WAKELOCK = "/sys/module/wakeup/parameters/disable_test_ws";
@@ -1259,6 +1260,7 @@ public interface Constants {
         {
             SENSOR_IND_WAKELOCK,
             NETLINK_WAKELOCK,
+			QPNP_WAKELOCK,
             TIMERFD_WAKELOCK,
             MSM_HSIC_HOST_WAKELOCK,
             WLAN_RX_WAKELOCK_DIVIDER,
