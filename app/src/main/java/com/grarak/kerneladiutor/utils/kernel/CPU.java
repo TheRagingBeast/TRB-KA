@@ -495,18 +495,18 @@ public class CPU implements Constants {
     }
 
     public static boolean isBigLITTLE() {
-        boolean bigLITTLE = getCoreCount() > 4;
+        boolean bigLITTLE = getCoreCount() > 2;
         if (!bigLITTLE) return false;
 
         if (bigCore == -1 || LITTLEcore == -1) {
             List < Integer > cpu0Freqs = getFreqs(0);
-            List < Integer > cpu4Freqs = getFreqs(4);
-            if (cpu0Freqs != null && cpu4Freqs != null) {
-                if (cpu0Freqs.size() > cpu4Freqs.size()) {
+            List < Integer > cpu2Freqs = getFreqs(2);
+            if (cpu0Freqs != null && cpu2Freqs != null) {
+                if (cpu0Freqs.size() > cpu2Freqs.size()) {
                     bigCore = 0;
                     LITTLEcore = 4;
                 } else {
-                    bigCore = 4;
+                    bigCore = 2;
                     LITTLEcore = 0;
                 }
             }
