@@ -508,7 +508,7 @@ public interface Constants {
     String GPU_AVAILABLE_FDB00000_QCOM_FREQS = "/sys/class/kgsl/kgsl-3d0/gpu_available_frequenciesa";
     String GPU_SCALING_FDB00000_QCOM_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/devfreq/governor";
     String GPU_AVAILABLE_FDB00000_QCOM_GOVERNORS = "/sys/class/kgsl/kgsl-3d0/devfreq/available_governors";
-    String GPU_SCALING_PWRSCALE_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governora";
+	String GPU_SCALING_PWRSCALE_GOVERNOR = "/sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governora";
 
     String GPU_CUR_FDC00000_QCOM_FREQ = "/sys/devices/fdc00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk";
     String GPU_MAX_FDC00000_QCOM_FREQ = "/sys/devices/fdc00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk";
